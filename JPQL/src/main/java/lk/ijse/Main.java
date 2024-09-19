@@ -14,6 +14,7 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
         /*JPQL SAVE*/
+        //This does not have an insert query only this type can do save
         /*Address address1 = new Address();
         address1.setAid(1);
         address1.setNo("100/2");

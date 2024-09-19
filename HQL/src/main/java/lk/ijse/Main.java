@@ -16,34 +16,27 @@ public class Main {
         Transaction transaction = session.beginTransaction();
 
         /*HQL SAVE*/
-        /*Address address1 = new Address();
-        address1.setAid(1);
-        address1.setNo("100/2");
-        address1.setRoad("kkkk");
-        address1.setCity("llll");
+       /* String address1 = "INSERT INTO Address (aid, no, road, city) VALUES (:aid, :no, :road, :city)";
+        Query query1 = session.createQuery(address1);
+        query1.setParameter("aid", 1);
+        query1.setParameter("no", "100/2");
+        query1.setParameter("road", "kkkk");
+        query1.setParameter("city", "llll");
+        query1.executeUpdate();
 
-        Address address2 = new Address();
-        address2.setAid(2);
-        address2.setNo("200/2");
-        address2.setRoad("mmmm");
-        address2.setCity("hhhh");
+        String address2 = "INSERT INTO Address (aid, no, road, city) VALUES (:aid, :no, :road, :city)";
+        Query query2 = session.createQuery(address2);
+        query2.setParameter("aid", 2);
+        query2.setParameter("no", "200/2");
+        query2.setParameter("road", "mmmm");
+        query2.setParameter("city", "hhhh");
+        query2.executeUpdate();
 
-        List<Address> addresses = new ArrayList<Address>();
-        addresses.add(address1);
-        addresses.add(address2);
-
-        Customer customer = new Customer();
-
-        customer.setId(1);
-        customer.setName("Sehan");
-        customer.setAddresses(addresses);
-
-        address1.setCustomer(customer);
-        address2.setCustomer(customer);
-
-        session.save(address1);
-        session.save(address2);
-        session.save(customer);*/
+        String sqlInsertCustomer = "INSERT INTO Customer (id, name) VALUES (:id, :name)";
+        Query customerQuery = session.createQuery(sqlInsertCustomer);
+        customerQuery.setParameter("id", 1);
+        customerQuery.setParameter("name", "Sehan");
+        customerQuery.executeUpdate();*/
 
         /*HQL UPDATE*/
        /* String update = "UPDATE Customer c SET c.name = :name WHERE c.id = :id";
